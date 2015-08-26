@@ -295,6 +295,10 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
   //Code Here
+devMountainEmployees[0] = tyler;
+devMountainEmployees[1] = cahlan;
+devMountainEmployees[2] = ryan;
+devMountainEmployees[3] = colt;
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
@@ -305,7 +309,14 @@ Loop through your devMountainEmployees until you find cahlan, then remove him fr
 
 
 //NEXT PROBLEM
-
+function findCahlan(devMountainEmployees) {
+  for (var i = 0; i < devMountainEmployees.length; i++) {
+    if (devMountainEmployees[i] === cahlan) {
+      devMountainEmployees.splice(i, 1);
+    }
+  }
+  return devMountainEmployees;
+}
 
 
 
@@ -343,6 +354,8 @@ of Data is to have an Array full of objects. */
 
   //Code Here
 
+var users = [];
+
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
 
@@ -353,6 +366,11 @@ var user1 = {
     password: 'iLoveJavaScript',
     username: 'infiniateLoop'
 };
+for (var i = 0; i < users.length; i++) {
+  if (users[i].email === "tylermcginnis33@gmail.com") {
+    users.splice(i, 1);
+  }
+}
 
 //Your Code Here
 
